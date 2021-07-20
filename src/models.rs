@@ -1,4 +1,4 @@
-use crate::schema::Todo;
+use crate::db::schema::todo;
 use chrono::NaiveDateTime;
 use diesel::prelude::*;
 use diesel::Insertable;
@@ -19,14 +19,14 @@ pub struct MediaContent {
 //}
 
 #[derive(Debug, Clone, Deserialize, Serialize, Insertable)]
-#[table_name = "Todo"]
+#[table_name = "todo"]
 pub struct TodoEntry {
     pub id: i32,
     pub name: String,
     pub body: String,
-    pub time_modified: NaiveDateTime,
-    pub completed: bool,
-    pub media: Vec<MediaContent>,
-    pub parent_id: i32,
-    pub parent_name: String,
+    //pub time_modified: NaiveDateTime,
+    //pub completed: bool,
+    //pub media: Vec<MediaContent>,
+    //pub parent_id: i32,
+    //pub parent_name: String,
 }

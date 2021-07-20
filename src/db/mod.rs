@@ -10,6 +10,8 @@ use rocket::{
 };
 use std::{env, ops::Deref};
 
+pub mod schema;
+
 // An alias to the type for a pool of Diesel Postgres Connection
 pub type PgPool = Pool<ConnectionManager<PgConnection>>;
 
